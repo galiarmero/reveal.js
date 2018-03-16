@@ -7,7 +7,7 @@
 		<title>reveal.js</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="css/theme/peacock.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -24,8 +24,71 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<!-- Intro -->
+				<section>
+					<h1>Modern JavaScript Stack</h1>
+					<small class='emph'>PART 1</small>
+					<p>
+						Package Managers, Transpilers <br> and Module Bundlers
+					</p>
+					<br>
+					<small>by <span class='emph'>Gali</span></small>
+				</section>
+				<section data-background-color="#000">
+					<img src='img/js-devs.jpg' style='width: 65%; height: 65%;'/>
+				</section>
+				<section data-background-color="#fff" data-background-image='img/js-tools.png' data-background-size="800px" data-background-repeat='repeat'>
+				</section>
+				<section>
+					<h1>"JavaScript Fatigue"</h1>
+
+					<aside class="notes">
+						Can't learn all of these in one go.<br>
+						But it's good to know their purpose.<br>
+						Each of these tools solve a problem or need<br>
+						These problems can be classified.
+					</aside>
+				</section>
+				<section data-background-image='img/ecosystem-diagram.png' data-background-size="800px">
+					<aside class="notes">
+						In this training, we will:
+						<li>Classify problems or the need for a tool in general-purpose JS programming. </li>
+						<li>Which tools can solve the problem</li>
+						<li>Why it can solve the problem tapos alternatives.</li>
+					</aside>
+				</section>
+				
+				<!-- Node.js -->
+				<section>
+					<div style="background: #000">
+						<img src='img/nodejs-logo.png' class='plain-dark' style='width: 30%; height: 30%;'/>
+					</div>
+					<p class="fragment">JavaScript runtime environment</p>
+					<p class="fragment">uses Chrome's V8 JavaScript engine</p>
+					<p class="fragment">Non-blocking</p>
+					<p class="fragment">For servers and applications</p>
+					<p class="fragment">Comes with NPM</p>
+
+
+					<aside class="notes">
+						<li>Before we can only run JS code in browsers</li>
+						<li>2009, JSConf EU</li>
+						<li>Started JS hype</li>
+					</aside>
+				</section>
+				
+				<!-- NPM registry -->
+				<section data-background-image='img/npm-site.png' data-background-size="100%">
+				</section>
+				<section>
+					<a href="http://www.modulecounts.com/">modulecounts.com</a>
+
+
+					<aside class="notes">
+						<li>Reuse code for a lot of purposes</li>
+						<li>Con: security risk</li>
+					</aside>
+				</section>
 			</div>
 		</div>
 
