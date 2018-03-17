@@ -33,6 +33,15 @@
 					</p>
 					<br>
 					<small>by <span class='emph'>Gali</span></small>
+
+					<aside class="notes">
+						<li>Know state of JavaScript these days</li>
+						<li>Familiarize with some technologies</li>
+					</aside>
+				</section>
+				<section data-background-image='img/stackoverflow-survey.png' data-background-size="1000px">
+				</section>
+				<section data-background-image='img/github-octoverse.png' data-background-size="1000px">
 				</section>
 				<section data-background-color="#000">
 					<img src='img/js-devs.jpg' style='width: 65%; height: 65%;'/>
@@ -44,24 +53,22 @@
 
 					<aside class="notes">
 						Can't learn all of these in one go.<br>
-						But it's good to know their purpose.<br>
-						Each of these tools solve a problem or need<br>
-						These problems can be classified.
+						But all these tools solve a problem or a need for general purpose programming.<br>
+						
 					</aside>
 				</section>
 				<section data-background-image='img/ecosystem-diagram.png' data-background-size="800px">
 					<aside class="notes">
 						In this training, we will:
-						<li>Classify problems or the need for a tool in general-purpose JS programming. </li>
-						<li>Which tools can solve the problem</li>
+						<li>Know these problems/needs and what tools solve them</li>
 						<li>Why it can solve the problem tapos alternatives.</li>
 					</aside>
 				</section>
 				
 				<!-- Node.js -->
 				<section>
-					<div style="background: #000">
-						<img src='img/nodejs-logo.png' class='plain-dark' style='width: 30%; height: 30%;'/>
+					<div>
+						<img src='img/nodejs-logo.png' class='plain' style='width: 30%; height: 30%;'/>
 					</div>
 					<p class="fragment">JavaScript runtime environment</p>
 					<p class="fragment">uses Chrome's V8 JavaScript engine</p>
@@ -78,17 +85,199 @@
 				</section>
 				
 				<!-- NPM registry -->
+				<section>
+					<h1>npm</h1>
+				</section>
 				<section data-background-image='img/npm-site.png' data-background-size="100%">
 				</section>
 				<section>
 					<a href="http://www.modulecounts.com/">modulecounts.com</a>
-
 
 					<aside class="notes">
 						<li>Reuse code for a lot of purposes</li>
 						<li>Con: security risk</li>
 					</aside>
 				</section>
+
+				<!-- Package Managers -->
+				<section>
+					<h2>Package</h2>
+					<p class="fragment">directory of files</p>
+					<p class="fragment emph">package.json</p>
+					<p class="fragment">depends on other packages</p>
+
+					<aside class="notes">
+						Code Reuse
+						<li>Saves time</li>
+						<li>Expertise from outside the organization</li>
+					</aside>
+				</section>
+
+				<section>
+					<section>
+						<div>
+							<img src='img/npm-logo.png' class='plain' style='width: 30%; height: 30%;'/>
+						</div>
+						<p class="fragment">the command line interface (CLI)</p>
+
+						<aside class="notes">
+							<li>put dependencies in place so that node can find them</li>
+							<li>manage dependency conflicts</li>
+						</aside>
+					</section>
+
+					<section>
+						<h2>Commands</h2>
+						<table style='font-size: 30px'>
+							<thead>
+								<tr>
+									<th>command</th>
+									<th>what it does</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>npm init</td>
+									<td>create a new npm package</td>
+								</tr>
+								<tr>
+									<td>npm install</td>
+									<td>install package.json deps in local node_modules folder</td>
+								</tr>
+								<tr>
+									<td>npm install &lt;package&gt;</td>
+									<td>install a package in local node_modules folder</td>
+								</tr>
+								<tr>
+									<td>npm install -g &lt;package&gt;</td>
+									<td>install a package in globally</td>
+								</tr>
+								<tr>
+									<td>npm install --save &lt;package&gt;</td>
+									<td>installs package locally, saves as dependencies in package.json</td>
+								</tr>
+								<tr>
+									<td>npm install --save-dev &lt;package&gt;</td>
+									<td>installs package locally, saves as devDependencies in package.json</td>
+								</tr>
+							</tbody>
+						</table>
+
+						<aside class="notes">
+							Demo
+							<li>npm init</li>
+							<li>npm install --save smallest</li>
+							<li>npm install --save-dev decamelize</li>
+							<li>rm -rf node_modules</li>
+							<li>npm install</li>
+							<li>rm -rf node_modules</li>
+							<li>npm install --production</li>
+						</aside>
+					</section>
+
+					<section>
+						<h2>Commands</h2>
+						<table style='font-size: 30px'>
+							<thead>
+								<tr>
+									<th>command</th>
+									<th>what it does</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>npm uninstall --save &lt;package&gt;</td>
+									<td>removes package locally, deletes as dependencies in package.json</td>
+								</tr>
+								<tr>
+									<td>npm uninstall --save-dev &lt;package&gt;</td>
+									<td>removes package locally, deletes as devDependencies in package.json</td>
+								</tr>
+							</tbody>
+						</table>
+					</section>
+
+					<section>
+						<h2>SemVer</h2>
+						<h4>
+							<span class='emph'>MAJOR</span>.
+							<span class='emph'>MINOR</span>.
+							<span class='emph'>PATCH</span>
+						</h4>
+					</section>
+
+					<section>
+						<img src='img/semver.jpg' style='width: 85%; height: 85%;' />
+					</section>
+
+					<section>
+						<h2>
+							<span class='emph'>~</span>3.2.4 === 3.2.<span class='emph'>*</span>
+						</h2>
+						<h2>
+							<span class='emph'>^</span>3.2.4 === 3.<span class='emph'>*</span>.<span class='emph'>*</span>
+						</h2>
+
+						<aside class='notes'>
+							Show sample package.json with tildes and carets
+						</aside>
+					</section>
+
+					<section>
+						<img src='img/works-on-my-machine.jpg' class='plain' />
+
+						<aside class='notes'>
+							<li>Not all maintainers comply</li>
+							<li>Human error</li>
+						</aside>
+					</section>
+
+					<section>
+						<div>
+							<img src='img/yarn-logo.png' class='plain-white' style='width: 50%; height: 50%;' />
+						</div>
+						<p class="fragment">alternative to npm client</p>
+						<p class="fragment">October 2016</p>
+						<p class="fragment">by Facebook in collab with Exponent, Tilde and Google</p>
+						<p class="fragment">still uses npm registry</p>
+
+
+						<aside class="notes">
+							<li>speed, reliability and security no longer met by npm</li>
+							<li>Facebook CI is cut-off from internet</li>
+							<li>Tried to commit node_modules</li>
+						</aside>
+					</section>
+				</section>
+
+				<!--
+					yarn
+						background
+					installation
+					yarn commands
+
+					what is yarn registry used?
+					how it solves "works on my machine" bugs
+						lockfiles
+						how to get npm-shrinkwrap in npm
+							npm shwrinkwrap to generate package-lock.json
+						in yarn, yarn.lock is generated by default
+					really fast
+						- show comparison
+						- run 3 installs on express
+						- screenshot
+						- tables
+					parallel installation
+					offline installs
+						- will it redownload package even if online?
+					flat mode
+					network resilience
+
+					https://scotch.io/@brian_kimo/npm-vs-yarn
+					
+				-->
+
+				<!-- Controlling security risks in npm -->
 			</div>
 		</div>
 

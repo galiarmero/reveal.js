@@ -239,10 +239,15 @@ body {
   border: 0;
   box-shadow: none; }
 
-  .reveal section img.plain-dark {
-    background: #000;
-    border: 0;
-    box-shadow: none; }
+.reveal section img.plain-dark {
+  background: #000;
+  border: 0;
+  box-shadow: none; }
+
+.reveal section img.plain-white {
+  background: #fff;
+  border: 0;
+  box-shadow: none; }
 
 .reveal a img {
   -webkit-transition: all .15s linear;
