@@ -473,7 +473,53 @@
 
 						<aside class='notes'>
 							transpiling ES6 code (or any next-gen code) to ES5 which has more consistent support across browsers
+
+							<li>compiler -> one language - another language</li>
+							<li>transpiler -> one language - another language, same level of abstraction</li>
 						</aside>
+					</section>
+					<section>
+						<img src='img/babel-sample-1.png' class='plain' style='width: 40%' />
+						<img src='img/arrow-right.png' class='plain' style='width: 5%' />
+						<img src='img/babel-sample-2.png' class='plain' style='width: 40%; margin: 1px auto;' />
+					</section>
+					<section>
+						<h2>tool for manipulating Abstract Syntax Tree (AST)</h2>
+					</section>
+					<section>
+						<h2>what's AST?</h2>
+						<p>
+							logical structure of the program represented through a tree
+						</p>
+
+						<aside class='notes'>
+							<li>representation of program throughout varios stages of compilation</li>
+							<li>think of it like JSON</li>
+							<li>already stripped with punctuation, delimiters, braces</li>
+							show AST explorer
+						</aside>
+					</section>
+					<section>
+						<h2>Stages of Compilation</h2>
+						<img src='img/compilation-steps.png' class='plain' style='width: 80%' />
+					</section>
+					<section>
+						<table>
+							<tbody>
+								<tr>
+									<td>parser</td>
+									<td><code>babylon</code></td>
+								</tr>
+								<tr>
+									<td>transformer</td>
+									<td><a href='https://babeljs.io/docs/plugins/#transform-plugins'>transform plugins</a></td>
+								</tr>
+								<tr>
+									<td>generator</td>
+									<td><code>babel-generator</code>, <code>prettier</code></td>
+								</tr>
+							</tbody>
+						</table>
 					</section>
 					<!-- 
 
