@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Modern JavaScript Stack</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/peacock.css">
@@ -91,7 +91,7 @@
 				<section data-background-image='img/npm-site.png' data-background-size="100%">
 				</section>
 				<section>
-					<a href="http://www.modulecounts.com/">modulecounts.com</a>
+					<a target='_blank' href="http://www.modulecounts.com/">modulecounts.com</a>
 
 					<aside class="notes">
 						<li>Reuse code for a lot of purposes</li>
@@ -137,28 +137,20 @@
 							</thead>
 							<tbody>
 								<tr>
-									<td>npm init</td>
+									<td><code>npm init</code></td>
 									<td>create a new npm package</td>
 								</tr>
 								<tr>
-									<td>npm install</td>
+									<td><code>npm install</code></td>
 									<td>install package.json deps in local node_modules folder</td>
 								</tr>
 								<tr>
-									<td>npm install &lt;package&gt;</td>
+									<td><code>npm install &lt;package&gt;</code></td>
 									<td>install a package in local node_modules folder</td>
 								</tr>
 								<tr>
-									<td>npm install -g &lt;package&gt;</td>
+									<td><code>npm install -g &lt;package&gt;</code></td>
 									<td>install a package in globally</td>
-								</tr>
-								<tr>
-									<td>npm install --save &lt;package&gt;</td>
-									<td>installs package locally, saves as dependencies in package.json</td>
-								</tr>
-								<tr>
-									<td>npm install --save-dev &lt;package&gt;</td>
-									<td>installs package locally, saves as devDependencies in package.json</td>
 								</tr>
 							</tbody>
 						</table>
@@ -166,12 +158,6 @@
 						<aside class="notes">
 							Demo
 							<li>npm init</li>
-							<li>npm install --save smallest</li>
-							<li>npm install --save-dev decamelize</li>
-							<li>rm -rf node_modules</li>
-							<li>npm install</li>
-							<li>rm -rf node_modules</li>
-							<li>npm install --production</li>
 						</aside>
 					</section>
 
@@ -186,15 +172,33 @@
 							</thead>
 							<tbody>
 								<tr>
-									<td>npm uninstall --save &lt;package&gt;</td>
+									<td><code>npm install --save &lt;package&gt;</code></td>
+									<td>installs package locally, saves as dependencies in package.json</td>
+								</tr>
+								<tr>
+									<td><code>npm install --save-dev &lt;package&gt;</code></td>
+									<td>installs package locally, saves as devDependencies in package.json</td>
+								</tr>
+								<tr>
+									<td><code>npm uninstall --save &lt;package&gt;</code></td>
 									<td>removes package locally, deletes as dependencies in package.json</td>
 								</tr>
 								<tr>
-									<td>npm uninstall --save-dev &lt;package&gt;</td>
+									<td><code>npm uninstall --save-dev &lt;package&gt;</code></td>
 									<td>removes package locally, deletes as devDependencies in package.json</td>
 								</tr>
 							</tbody>
 						</table>
+
+						<aside class="notes">
+							Demo
+							<li>npm install --save smallest</li>
+							<li>npm install --save-dev decamelize</li>
+							<li>rm -rf node_modules</li>
+							<li>npm install</li>
+							<li>rm -rf node_modules</li>
+							<li>npm install --production</li>
+						</aside>
 					</section>
 
 					<section>
@@ -248,36 +252,239 @@
 							<li>Tried to commit node_modules</li>
 						</aside>
 					</section>
+
+					<section>
+						<h2>Installation</h2>
+						<div><a target='_blank' href='https://yarnpkg.com/latest.msi'>https://yarnpkg.com/latest.msi</a></div>
+						<div><code>choco install yarn</code></div>
+						<div><code>npm install -g yarn</code></div>
+					</section>
+
+					<section>
+						<h2>Commands</h2>
+						<table style='font-size: 30px'>
+							<thead>
+								<tr>
+									<th>npm</th>
+									<th>yarn</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><code>npm init</code></td>
+									<td><code>yarn init</code></td>
+								</tr>
+								<tr>
+									<td><code>npm install</code></td>
+									<td><code>yarn</code></td>
+								</tr>
+								<tr>
+									<td><code>npm install &lt;package&gt;</code></td>
+									<td><code>yarn add &lt;package&gt;</code></td>
+								</tr>
+								<tr>
+									<td><code>npm install -g &lt;package&gt;</code></td>
+									<td><code>yarn global add &lt;package&gt;</code></td>
+								</tr>
+							</tbody>
+						</table>
+
+						<aside class="notes">
+							Demo
+							<li>yarn init</li>
+						</aside>
+					</section>
+
+					<section>
+						<h2>Commands</h2>
+						<table style='font-size: 30px'>
+							<thead>
+								<tr>
+									<th>npm</th>
+									<th>yarn</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><code>npm install --save &lt;package&gt;</code></td>
+									<td><code>yarn add &lt;package&gt;</code></td>
+								</tr>
+								<tr>
+									<td><code>npm install --save-dev &lt;package&gt;</code></td>
+									<td><code>yarn add --dev &lt;package&gt;</code></td>
+								<tr>
+									<td><code>npm uninstall --save &lt;package&gt;</code></td>
+									<td><code>yarn remove &lt;package&gt;</code></td>
+								</tr>
+							</tbody>
+						</table>
+
+						<aside class="notes">
+							Demo
+							<li>yarn add smallest</li>
+							<li>yarn add --dev decamelize</li>
+							<li>rm -rf node_modules</li>
+							<li>yarn</li>
+							<li>rm -rf node_modules</li>
+							<li>yarn install --production</li>
+						</aside>
+					</section>
+
+					<section data-background-image='img/yarn-benefits.png' data-background-size="100%">
+						<aside class='notes'>
+							<li>offline mode - succeeding installs will not require internet</li>
+							<li>deterministic - through yarn.lock</li>
+							<li>follow specific steps to achieve parallel install and speed</li>
+							<li>same packages - mirrored from npm registry</li>
+							<li>flat - avoid duplicates, will ask for user input</li>
+						</aside>
+					</section>
+
+					<section>
+						<h2><code class='emph'>yarn.lock</code></h2>
+					</section>
+
+					<section>
+						<h2>Speed</h2>
+						<div>
+							<img src='img/yarn-vs-npm.png' />
+						</div>
+						<small>installing <code class='emph'>express</code></small><br>
+						<small>source: 
+							<a target='_blank' href='https://medium.com/@nikjohn/facebooks-yarn-vs-npm-is-yarn-really-better-1890b3ea6515'>
+								<em>’s Yarn vs npm — Is Yarn really better?</em>, Nikhil John, medium.com
+							</a>
+						</small>
+					</section>
+
+					<section>
+						<h2>in comes <span class='emph'>npm@5</span></h2>
+						<p class='fragment'>May 2017</p>
+					</section>
+
+					<section>
+						<h2><span class='emph'>npm@5</span> features</h2>
+						<li class='fragment emph'><code>package-lock.json</code></li>
+						<li class='fragment'><code class='emph'>--save</code> is now default</li>
+						<li class='fragment'>no installed tree displayed</li>
+						<li class='fragment'>significantly faster</li>
+						<li class='fragment'>option for offline installs</li>
+					</section>
+
+					<section>
+						<code class='emph'>--prefer-offline</code><br>
+						<code class='emph'>--offline</code>
+					</section>
+
+					<section>
+						<h2>speed improvements</h2>
+						<video data-src="https://video.twimg.com/tweet_video/DAJ-VtyUQAAVGtQ.mp4" type="video/mp4" data-autoplay>
+						</video>
+					</section>
+
+					<section>
+						<h2>Speed</h2>
+						<div>
+							<img src='img/yarn-vs-npm5.png' style='width: 55%; height: 55%' />
+						</div>
+						<small>installing <code class='emph'>express-generator</code></small><br>
+						<small>source: 
+							<a target='_blank' href='https://medium.com/netscape/npm-5-yarn-killer-ba69737b24d0'>
+								<em>npm@5 — Yarn killer?</em>, Nikhil John, medium.com/netscape
+							</a>
+						</small>
+					</section>
+
+					<section>
+						<h1>Quiz!</h1>
+						<h3>Go to <a target='_blank' href='https://play.kahoot.it/#/?quizId=0f46e5be-5115-437f-b985-f0a45f7ffb17'>https://kahoot.it/</a></h3>
+					</section>
 				</section>
 
+				<section>
+					<section>
+						<h2>JavaScript Engines</h2>
+						<table>
+							<tbody>
+								<tr>
+									<td>Chrome</td>
+									<td>V8</td>
+								</tr>
+								<tr>
+									<td>Firefox</td>
+									<td>SpiderMonkey</td>
+								</tr>
+								<tr>
+									<td>Safari</td>
+									<td>JavaScriptCore</td>
+								</tr>
+								<tr>
+									<td>Edge</td>
+									<td>Chakra</td>
+								</tr>
+							</tbody>
+						</table>
+						<aside class='notes'>
+							<li>converts JavaScript code to optimized code for the browser</li>
+							<li>different implementation but follow ECMAScript Specification</li>
+							<li>each engine constantly evolve, pabilisan</li>
+						</aside>
+					</section>
+					<section>
+						<h2>ECMAScript Specification <small class='emph'>(ECMA-262)</small></span><h2>
+						
+						<aside class='notes'>
+							<li>standardized by Ecma International</li>
+						</aside>
+					</section>
+					<section>
+						<h2>ECMA Technical Committee 39 <small class='emph'>(TC39)</small></span><h2>
+						
+						<aside class='notes'>
+							<li>responsible for evolving specifications</li>
+							<li>holds 3-day meetings every couple of months</li>
+							<li>proposing changes, maturity stages</li>
+						</aside>
+					</section>
+					<section>
+						<h2><a target='_blank' href='https://tc39.github.io/process-document/'>The TC39 Process</a><h2>
+
+						<aside class='notes'>
+							5 maturity stages
+						</aside>
+					</section>
+					<section>
+						<h4>Problem:</h4>
+						<h2>JavaScript engines don't comply right away</h2>
+						<h4><a target='_blank' href='https://kangax.github.io/compat-table/es6/'>https://kangax.github.io/compat-table/es6/</a></h4>
+
+						<aside class='notes'>
+							many factors to consider, optimization<br>
+							as a result, can't write cutting-edge JS
+						</aside>
+					</section>
+					<section>
+						<div>
+							<img src='img/babel-logo.png' class='plain' style='width: 50%; height: 50%;' />
+						</div>
+					</section>
+					<section>
+						<h3><em>compiler for writing next-generation JavaScript</em></h3>
+
+						<aside class='notes'>
+							transpiling ES6 code (or any next-gen code) to ES5 which has more consistent support across browsers
+						</aside>
+					</section>
+					<!-- 
+
+					-->
+				</section>
+
+				
+
 				<!--
-					yarn
-						background
-					installation
-					yarn commands
-
-					what is yarn registry used?
-					how it solves "works on my machine" bugs
-						lockfiles
-						how to get npm-shrinkwrap in npm
-							npm shwrinkwrap to generate package-lock.json
-						in yarn, yarn.lock is generated by default
-					really fast
-						- show comparison
-						- run 3 installs on express
-						- screenshot
-						- tables
-					parallel installation
-					offline installs
-						- will it redownload package even if online?
-					flat mode
-					network resilience
-
 					https://scotch.io/@brian_kimo/npm-vs-yarn
-					
 				-->
-
-				<!-- Controlling security risks in npm -->
 			</div>
 		</div>
 
@@ -290,6 +497,7 @@
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
 				dependencies: [
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
 					{ src: 'plugin/notes/notes.js', async: true },
