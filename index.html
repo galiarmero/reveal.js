@@ -57,7 +57,7 @@
 						
 					</aside>
 				</section>
-				<section data-background-image='img/ecosystem-diagram.png' data-background-size="800px">
+				<section data-background-image='img/ecosystem-diagram-wide.png' data-background-size="800px">
 					<aside class="notes">
 						In this training, we will:
 						<li>Know these problems/needs and what tools solve them</li>
@@ -454,6 +454,20 @@
 						</aside>
 					</section>
 					<section>
+						<h4 class='fragment'><span class='emph'>Stage 0</span>: Strawman</h4>
+						<h4 class='fragment'><span class='emph'>Stage 1</span>: Proposal</h4>
+						<h4 class='fragment'><span class='emph'>Stage 2</span>: Draft</h4>
+						<h4 class='fragment'><span class='emph'>Stage 3</span>: Candidate</h4>
+						<h4 class='fragment'><span class='emph'>Stage 4</span>: Finished</h4>
+						<aside class='notes'>
+							<li>strawman - idea palang</li>
+							<li>proposal - worth working on</li>
+							<li>draft - may initial spec na</li>
+							<li>candidate - spec complete, implementations</li>
+							<li>finished - will be published in next ES release</li>
+						</aside>
+					</section>
+					<section>
 						<h4>Problem:</h4>
 						<h2>JavaScript engines don't comply right away</h2>
 						<h4><a target='_blank' href='https://kangax.github.io/compat-table/es6/'>https://kangax.github.io/compat-table/es6/</a></h4>
@@ -482,6 +496,9 @@
 						<img src='img/babel-sample-1.png' class='plain' style='width: 40%' />
 						<img src='img/arrow-right.png' class='plain' style='width: 5%' />
 						<img src='img/babel-sample-2.png' class='plain' style='width: 40%; margin: 1px auto;' />
+						<aside class='notes'>
+							show repl: https://babeljs.io/repl/
+						</aside>
 					</section>
 					<section>
 						<h2>tool for manipulating Abstract Syntax Tree (AST)</h2>
@@ -512,7 +529,7 @@
 								</tr>
 								<tr>
 									<td>transformer</td>
-									<td><a href='https://babeljs.io/docs/plugins/#transform-plugins'>transform plugins</a></td>
+									<td><a target='_blank' href='https://babeljs.io/docs/plugins/#transform-plugins'>transform plugins</a></td>
 								</tr>
 								<tr>
 									<td>generator</td>
@@ -521,9 +538,41 @@
 							</tbody>
 						</table>
 					</section>
-					<!-- 
+					<section>
+						<h2>how babylon and babel-generator work</h2>
+					</section>
+					<section>
+						<h2>plugins</h2>
+						<p><a target='_blank' href='https://babeljs.io/docs/plugins/'>https://babeljs.io/docs/plugins/</a></p>
+					
 
-					-->
+						<aside class='notes'>
+							<li>babel doesn't do anything out of the box</li>
+						</aside>
+					</section>
+					<section>
+						<h2>presets</h2>
+					</section>
+					<section>
+						<code>
+							<p>
+								git clone https://gitlabe1.ext.net.nokia.com/garmero/babel-demo.git
+							</p>
+							<p>
+								cd babel-demo
+							</p>
+							<p>
+								npm install -g babel-cli
+							</p>
+							<p>
+								npm install babel-preset-env
+							</p>
+						</code>
+
+						<aside class='notes'>
+							easiest way to get started
+						</aside>
+					</section>
 				</section>
 
 				
